@@ -1,8 +1,11 @@
 import sys
 import os
 
-sys.path.append('../image_process')
-import image
+sys.path.append('/media/shreyas/DATA/linux_files/image_compression/image_process')
+import open_image
+import process_image
+import huffman_encode
+import huffman_tree
 
 def main():
     pass
