@@ -6,9 +6,7 @@ class Node:
         self.right = None # Right subtree
 
 
-
-
-class Heap:
+class Heap:     #Heap structure to find the Huffman tree
     def __init__(self, array):
         self.array = array
         self.create_heap()

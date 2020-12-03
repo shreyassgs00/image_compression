@@ -12,9 +12,9 @@ def find_numpy_arrays(image):
     rgb = Image.Image.split(image)
     r = np.asarray(rgb[0])
     g = np.asarray(rgb[1])
-    b = np.asarray(rgb[0])
+    b = np.asarray(rgb[2])
 
-    return [r,g,b]
+    return [numpy_array,r,g,b]
 
 def rgb_to_grayscale(rgb):    #Converting RGB image to grayscale. (Not necessary for compression)
     grayscale = 0.2989 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]
@@ -32,6 +32,7 @@ def find_freq(numpy_array):
                 count_dict[element] = 1
     return count_dict
 
-def process_image(image):
-    numpy_array = find_numpy_arrays(image)
-    return find_freq(numpy_array[0])
+#Function to find length of stored bits
+def find_length_of_stored_bits(numpy_array):
+    length = numpy_array.shape[0]*numpy_array.shape[1]*numpy_array.shape[2]*8
+    return length
