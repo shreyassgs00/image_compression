@@ -1,9 +1,6 @@
 from PIL import Image
-import numpy as np
 
-def open_image():
+def open_image(image_path):
     #Opening the image with the path provided. 
-    image = Image.open('../image/to_compress.jpg')
+    image = Image.open(image_path)
     return image
-
-
